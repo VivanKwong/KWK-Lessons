@@ -16,15 +16,27 @@ class ViewController2: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        answer2.isHidden = true
+        image2.isHidden = true
+        imageX2.isHidden = true
     }
     
     @IBAction func choiceA2(_ sender: UIButton) {
+        answer2.isHidden = false
+        imageX2.isHidden = false
+        image2.isHidden = true
     }
     
     @IBAction func choiceB2(_ sender: UIButton) {
+        answer2.isHidden = false
+        image2.isHidden = false
+        imageX2.isHidden = true
     }
     
     @IBAction func choiceC2(_ sender: UIButton) {
+        answer2.isHidden = false
+        imageX2.isHidden = false
+        image2.isHidden = true
     }
     /*
     // MARK: - Navigation

@@ -21,22 +21,24 @@ class ViewController: UIViewController {
         imageX1.isHidden = true
     }
 
+    
     @IBAction func choiceA1(_ sender: UIButton) {
         answer1.isHidden = false
         imageX1.isHidden = false
+        image1.isHidden = true
     }
     
+
     @IBAction func choiceB1(_ sender: UIButton) {
         answer1.isHidden = false
         image1.isHidden = false
+        imageX1.isHidden = true
     }
     
     @IBAction func choiceC1(_ sender: UIButton) {
         answer1.isHidden = false
         imageX1.isHidden = false
+        image1.isHidden = true
     }
     
-    @IBAction func nextButton1(_ sender: UIButton) {
-    }
 }
-
