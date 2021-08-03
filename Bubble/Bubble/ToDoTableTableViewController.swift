@@ -10,11 +10,10 @@ import UIKit
 class ToDoTableTableViewController: UITableViewController {
 
     var toDos : [ToDo] = []
+    var listOfToDo : [ToDoCD] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        toDos = createToDos()
     }
     
     func createToDos() -> [ToDo] {
@@ -30,6 +29,16 @@ class ToDoTableTableViewController: UITableViewController {
       return [swift, dog]
     }
 
+    func getToDos() {
+         if let accessToCoreData = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+
+         if let dataFromCoreData = try? accessToCoreData.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
+              listOfToDo = dataFromCoreData
+              tableView.reloadData()
+              }
+         }
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +58,14 @@ class ToDoTableTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+      // this gives us a single ToDo
+      let toDo = toDos[indexPath.row]
+
+      performSegue(withIdentifier: "moveToComplete", sender: toDo)
+    }
 
     // MARK: - Navigation
 
@@ -59,6 +76,16 @@ class ToDoTableTableViewController: UITableViewController {
         if let addVC = segue.destination as? AddToDoViewController {
             addVC.previousVC = self
         }
+        if let completeVC = segue.destination as? CompleteToDoViewController {
+          if let toDo = sender as? ToDoCD {
+            completeVC.selectedToDo = toDo
+            completeVC.previousVC = self
+          }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      getToDos()
     }
 
 }

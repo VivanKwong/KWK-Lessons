@@ -38,25 +38,50 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ns9-8r-Wmu" kind="show" identifier="moveToComplete" id="LOF-27-8T3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YT5-cq-xJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="503" y="96"/>
         </scene>
-        <!--View Controller-->
+        <!--Complete To Do View Controller-->
         <scene sceneID="LXW-nQ-SVQ">
             <objects>
-                <viewController id="ns9-8r-Wmu" sceneMemberID="viewController">
+                <viewController id="ns9-8r-Wmu" customClass="CompleteToDoViewController" customModule="Bubble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YTv-Jt-d95">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of ToDo will go here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8z-mV-Sdp">
+                                <rect key="frame" x="31" y="216" width="352" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POA-c6-s0O">
+                                <rect key="frame" x="67" y="373" width="281" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="Mark this ToDo as complete!"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="ns9-8r-Wmu" eventType="touchUpInside" id="YcH-dx-2TT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wxl-Ui-ccm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ctf-r6-XX3"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="y8z-mV-Sdp" id="23r-I6-ddB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nS5-6E-0mN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="492" y="776"/>
+            <point key="canvasLocation" x="491.304347826087" y="775.44642857142856"/>
         </scene>
         <!--Add To Do View Controller-->
         <scene sceneID="gWb-Xd-ysx">

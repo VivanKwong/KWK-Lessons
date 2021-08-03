@@ -18,6 +18,7 @@
 		BD1F45F326B83D3200D374AA /* ToDoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F45F226B83D3200D374AA /* ToDoTableTableViewController.swift */; };
 		BD1F45F526B83DD500D374AA /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F45F426B83DD500D374AA /* ToDo.swift */; };
 		BD1F45F726B8F4B700D374AA /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F45F626B8F4B700D374AA /* AddToDoViewController.swift */; };
+		BD1F45F926B988AA00D374AA /* CompleteToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F45F826B988AA00D374AA /* CompleteToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BD1F45F226B83D3200D374AA /* ToDoTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableTableViewController.swift; sourceTree = "<group>"; };
 		BD1F45F426B83DD500D374AA /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		BD1F45F626B8F4B700D374AA /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
+		BD1F45F826B988AA00D374AA /* CompleteToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				BD1F45C826B83A9E00D374AA /* Bubble.xcdatamodeld */,
 				BD1F45F226B83D3200D374AA /* ToDoTableTableViewController.swift */,
 				BD1F45F626B8F4B700D374AA /* AddToDoViewController.swift */,
+				BD1F45F826B988AA00D374AA /* CompleteToDoViewController.swift */,
 			);
 			path = Bubble;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				BD1F45C026B83A9E00D374AA /* AppDelegate.swift in Sources */,
 				BD1F45F526B83DD500D374AA /* ToDo.swift in Sources */,
 				BD1F45C226B83A9E00D374AA /* SceneDelegate.swift in Sources */,
+				BD1F45F926B988AA00D374AA /* CompleteToDoViewController.swift in Sources */,
 				BD1F45F326B83D3200D374AA /* ToDoTableTableViewController.swift in Sources */,
 				BD1F45F726B8F4B700D374AA /* AddToDoViewController.swift in Sources */,
 				BD1F45CA26B83A9E00D374AA /* Bubble.xcdatamodeld in Sources */,
